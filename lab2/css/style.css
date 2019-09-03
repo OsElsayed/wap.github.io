@@ -1,0 +1,39 @@
+body{
+    background: aliceblue;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+h1{
+font-family: 'Courier New', Courier, monospace;
+font-size: 100px;
+color: blue;
+}
+h3{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 2em;
+    color: brown;
+    border: 3px solid skyblue;
+    border-radius: 12px;
+
+}
+ul li{
+    color:orange;
+}
+
+    a:visited {
+    color:red;
+}
+    a:hover {
+    color: green;
+    }
+  
+    a:active {
+    color: red;
+    }
+
+    dd{
+        background:honeydew;
+    }
+    p::first-letter{
+        font-size: 1.5em;
+    }
