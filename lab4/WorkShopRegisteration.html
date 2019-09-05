@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Form Lab 4</title>
+      <link rel="stylesheet" type="text/css" href="css/styles.css">
+      <script src="js/main.bundle.js"></script>
+      <script src="js/newrelic.js"></script>
+      <script src="js/snowplow.js"></script>
+   </head>
+   <body>
+      <form name="Canada-DAPP-entry-page" class="row column" action="actionPage.jsp" method="GET">
+         <div class="row align-center">
+            <div class="small-10 medium-8 columns" style="text-align: center">
+               <input id="entry-review-button" type="submit" class="button" value="Review My Application"/>
+            </div>
+         </div>
+         <section class="row column" id="entry-personal-info">
+            <header class="row column text-center">
+               <h2><span>Personal Information</span></h2>
+            </header>
+            <div class="row">
+               <div class="small-12 columns">
+                  <div class="row">
+                     <div class="small-12 medium-8 columns">
+                        <div class="row">
+                           <div class="text-input small-12 medium-6 columns required">
+                              <span><span><label for="personal-first-name"><span>First Name <span style="color: red"> *</span></span><span class="show-for-sr"><span>Required</span></span></label>
+                              </span></span>
+                              <div class="validation-wrapper">
+                                 <input autocomplete="off"  id="personal-first-name" maxlength="15"  class="" type="text" value="" required placeholder="First Name" pattern="^[a-z_A-Z]*$" title="Please enter your First Name. NO Numbers  allowed only a-z A-Z _">
+                              </div>
+                           </div>
+                           <div class="text-input small-12 medium-6 columns required">
+                              <label for="personal-last-name"><span>Last Name <span style="color: red"> *</span></span>
+                              <span class="show-for-sr"><span>Required</span></span></label>
+                              <div class="validation-wrapper">
+                                 <input autocomplete="off"  id="personal-last-name" maxlength="15"  class="" type="text" value="" required placeholder="Last Name" pattern="^[a-z_A-Z]*$" title="Please enter your Last Name. NO Numbers  allowed only a-z A-Z _"/>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="row">
+                           <div class="date-input small-12 medium-6 columns required">
+                              
+                                 
+                                    <label for="personal-date-of-birth"><span>Date of Birth <span style="color: red"> *</span></span><span class="show-for-sr"><span>Required</span></span></label>
+                                    <div class="validation-wrapper">
+                                       <input autocomplete="off"  id="personal-date-of-birth"  class="" type="tel" placeholder="MM/DD/YYYY" required pattern="^^((0|1)\d{1})/((0|1|2)\d{1})/((19|20)\d{2})$" title="Please enter your Date of Birth. Date Formate MM/DD/YYYY">
+                                    </div>
+                                 
+                              
+                           </div>
+                           <div class="text-input small-12 medium-6 columns required">
+                        
+                                 <p class="help"  aria-describedby="sr-tooltip-personal-mothers-maiden-name"><span class="has-tip small-show-left" data-tooltip="Your mother’s maiden name is used as an added security feature to verify your identity if you call us." aria-hidden="true"><i class="oi-question outline"></i></span><span id="sr-tooltip-personal-mothers-maiden-name" class="show-for-sr">Your mother’s maiden name is used as an added security feature to verify your identity if you call us.</span></p>
+                           
+                                    <label for="personal-mothers-maiden-name"><span>Mother’s Maiden Name <span style="color: red"> *</span></span><span class="show-for-sr"><span>Required</span></span></label>
+                                    <div class="validation-wrapper">
+                                       <input autocomplete="off"  id="personal-mothers-maiden-name" maxlength="25"  class="" type="text" value="" required placeholder="Mother’s Maiden Name" pattern="^[^0-9]*$" title="Please enter your Mother’s Maiden Name. NO Numbers  allowed only a-z A-Z _">
+                                    </div>
+                            
+                           </div>
+                        </div>
+                     </div>
+                     <div class="small-12 medium-4 columns hide-for-small-only">
+                        <div class="aspire-card-art-wrapper">
+                           <div class="plastic-img-center"><img id="cc-art" src="images/card-en.png" alt="Card Art" class="card-art"></div>
+                           <div class="card-center">
+                              <p class="card-art-name"> </p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="text-input small-12 medium-6 columns">
+                  
+                     <p class="help" aria-describedby="sr-tooltip-personal-social-insurance-number"><span class="has-tip small-show-left" data-tooltip="Your Social Insurance Number is used for identification purposes only and is optional." aria-hidden="true"><i class="oi-question outline"></i></span><span id="sr-tooltip-personal-social-insurance-number" class="show-for-sr">Your Social Insurance Number is used for identification purposes only and is optional.</span></p>
+                     
+                        <label for="personal-social-insurance-number"><span>Social Insurance Number</span><i class="oi-locked"></i><span class="sub-label"><span>(Optional)</span></span></label>
+                        <div class="validation-wrapper">
+                           <input autocomplete="off"  id="personal-social-insurance-number" class="" type="tel" placeholder="___-___-___"  pattern="^\d{3}-\d{3}-\d{3}$" title="the SSN should be XXX-XXX-XXX x is any number">
+                        </div>
+                     
+                  
+               </div>
+               <div class="select-input small-12 medium-6 columns">
+                  
+                        <label for="personal-learn-about-source"><span>How did you learn about this card? </span><span class="sub-label"><span>(Optional)</span></span></label>
+                        <div class="validation-wrapper">
+                           <select id="personal-learn-about-source" name="personalLearnAbout" class="">
+                              <option value="" disabled="">Select source</option>
+                              <option value="mailOffer">Mail Offer</option>
+                              <option value="searchEngine">Search Engine</option>
+                              <option value="onlineBanner">Online Banner Ad or Video</option>
+                              <option value="facebook">Facebook Ad or Video</option>
+                              <option value="comparisonSite">Credit Cards Comparison Site</option>
+                              <option value="email">Email with CapitalOne Content</option>
+                              <option value="familyFriend">Family or Friend</option>
+                              <option value="television">Television</option>
+                              <option value="outdoorAd">Outdoor or Transit Ad</option>
+                              <option value="newspaper">Newspaper</option>
+                              <option value="magazine">Magazine</option>
+                              <option value="sponsoredEvent">CapitalOne Sponsored Event</option>
+                              <option value="other" >Other</option>
+                           </select>
+                        </div>
+                   
+               </div>
+            </div>
+         </section>
+         <section class="row column" id="entry-contact">
+            <header class="row column text-center">
+               <h2><span>Contact Information</span></h2>
+            </header>
+            <div class="row column">
+               <div class="row column">
+                  <div>
+                     <div class="row">
+                        <div class="address-input small-12 medium-8 columns required">
+                           
+                                 <label for="contact-home-address"><span>Home Address (No P.O. Boxes) <span style="color: red"> *</span></span><span class="show-for-sr"><span>Required</span></span></label>
+                                 <div class="validation-wrapper">
+                                    <input id="contact-home-address" type="text"  placeholder="No P.O. Boxes" maxlength="120"  value="" autocomplete="off" title="Please ensure your Street Address consists of more than three characters." required pattern="^\w{3,}$" />
+                                  
+                                 </div>
+                         
+                        </div>
+                        <div class="text-input small-12 medium-4 columns">
+                       
+                                 <label for="contact-apartment"><span>Suite/Apt. # </span><span class="sub-label"><span>(if Applicable)</span></span></label>
+                                 <div class="validation-wrapper">
+                                    <input autocomplete="off"  id="contact-apartment" maxlength="15" class="" type="text" value="" placeholder="Suite/Apt" />
+                                 </div>
+                           
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="text-input small-12 medium-6 columns required">
+                   
+                        <p class="help" aria-describedby="sr-tooltip-contact-email"><span class="has-tip small-show-left" data-tooltip="We’ll email you about important account information, new services and special offers. If you don’t have an email address, just call us at 1‑800‑481‑3239 to complete your application." aria-hidden="true"><i class="oi-question outline"></i></span><span id="sr-tooltip-contact-email" class="show-for-sr">We’ll email you about important account information, new services and special offers. If you don’t have an email address, just call us at 1‑800‑481‑3239 to complete your application.</span></p>
+                       
+                           <label for="contact-email"><span>Email Address <span style="color: red"> *</span></span><span class="show-for-sr"><span>Required</span></span></label>
+                           <div class="validation-wrapper">
+                              <input autocomplete="off"  id="contact-email" maxlength="40"  class="" type="text" value="" placeholder="Email@Email" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$" required title="Please enter your Email Address." />
+                           </div>
+                     
+                  </div>
+                  <div class="text-input small-12 medium-6 columns required">
+                     
+                           <label for="contact-phone"><span>Primary Phone Number <span style="color: red"> *</span></span><span class="show-for-sr"><span>Required</span></span></label>
+                           <div class="validation-wrapper">
+                               <input autocomplete="off"  id="contact-phone"  class="" type="tel" placeholder="(___) ___-____" required pattern="^\(\d{3}\)\s\d{3}-\d{4}$" title="Please enter your Primary Phone Number. form (XXX) XXX-XXXX x is digite" />
+                           </div>
+                       
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section class="row column" id="entry-authorized">
+            <header class="row column text-center">
+               <h2><span>Authorized User</span></h2>
+               <p class="help" aria-describedby="sr-tooltip-entry-authorized-header"><span class="has-tip small-show-left" data-tooltip="An authorized user receives their own card that is attached to your account. Any purchases or cash advances made using this card will show up on your monthly statement." aria-hidden="true"><i class="oi-question outline"></i></span><span id="sr-tooltip-entry-authorized-header" class="show-for-sr">An authorized user receives their own card that is attached to your account. Any purchases or cash advances made using this card will show up on your monthly statement.</span></p>
+            </header>
+            <div>
+               <div class="options-input row column">
+                
+                     <div class="validation-wrapper">
+                        <fieldset class="group-checkbox"><span class="undefined nobr">
+                            <input id="authorized-user.confirmation" type="checkbox" value="confirmation" /><label for="authorized-user.confirmation"><span><span><b><span>Yes</span>!</b> I would like to add an Authorized User (AU) to my account and receive a second card with their name on it.</span></span></label></span></fieldset>
+                     </div>
+                 
+               </div>
+            </div>
+         </section>
+         <section class="row column" id="entry-employment">
+            <header class="row column text-center">
+               <h2><span>Employment Information</span></h2>
+            </header>
+            <div class="row">
+               <div class="select-input small-12 medium-12 large-6 columns required">
+                 
+                        <label for="employment-status"><span>Employment Status</span><span class="show-for-sr"><span>Required</span></span></label>
+                        <div class="validation-wrapper">
+                           <select id="employment-status" name="employment-status"  class="">
+                              <option value="" disabled="">Select status</option>
+                              <option value="employed">Employed</option>
+                              <option value="selfEmployed">Self-Employed</option>
+                              <option value="retired">Retired</option>
+                              <option value="student">Student</option>
+                              <option value="unemployed">Unemployed</option>
+                           </select>
+                        </div>
+                   
+               </div>
+            </div>
+         </section>
+         <section class="row column" id="entry-financial">
+            <header class="row column text-center">
+               <h2><span>Financial Information</span></h2>
+            </header>
+            <div class="row column">
+               <div class="options-input row columns">
+                 
+                     <div class="validation-wrapper">
+                        <fieldset class="">
+                           <legend id="financial-live"><span><span>Do you: (Optional)</span></span></legend>
+                           <span class="undefined nobr">
+                               <input id="financial-live.own" name="financial-live" type="radio" value="own" /><label for="financial-live.own"><span><span>Own</span></span></label></span><span class="undefined nobr"><input id="financial-live.rent" name="financial-live" type="radio" value="rent"/><label for="financial-live.rent"><span><span>Rent</span></span></label></span><span class="undefined nobr"><input id="financial-live.parents" name="financial-live" type="radio" value="parents"/><label for="financial-live.parents"><span><span>Live with parents</span></span></label></span><span class="undefined nobr"><input id="financial-live.other" name="financial-live" type="radio" value="other" checked /><label for="financial-live.other"><span><span>Other</span></span></label></span>
+                        </fieldset>
+                     </div>
+                  
+               </div>
+               <div class="row">
+                  <div class="currency-input small-12 medium-6 columns required">
+                     
+                           <label for="financial-annual-income"><span>Your Annual Income (Before Taxes) <span style="color: red"> *</span></span><span class="show-for-sr"><span>Required</span></span></label>
+                           <div class="validation-wrapper">
+                              <div class="currency"><span class="currency-sign">$</span>
+                                <input autocomplete="off"  pattern="[0-9]*" id="financial-annual-income" maxlength="7"  class="" type="tel" value="" required placeholder="Your Annual Income" /></div>
+                           </div>
+                     
+                  </div>
+                  <div class="currency-input small-12 medium-6 columns required">
+                     
+                        <p class="help" aria-describedby="sr-tooltip-financial-other-income"><span class="has-tip small-show-left" data-tooltip="Examples of other income could include: spousal income, rental income, spousal support or child support." aria-hidden="true"><i class="oi-question outline"></i></span><span id="sr-tooltip-financial-other-income" class="show-for-sr">Examples of other income could include: spousal income, rental income, spousal support or child support.</span></p>
+                     
+                           <label for="financial-other-income"><span>Other Household Income (Before Taxes)<span style="color: red"> *</span></span><span class="show-for-sr"><span>Required</span></span></label>
+                           <div class="validation-wrapper">
+                              <div class="currency"><span class="currency-sign">$</span><input autocomplete="off"  pattern="[0-9]*" id="financial-other-income" maxlength="7"  class="" type="tel" value="" required placeholder="Other Household Income" title="Please enter your Other Household Income."></div>
+                           </div>
+                   
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="options-input small-12 medium-6 columns">
+                  
+                        <div class="validation-wrapper">
+                           <fieldset class="">
+                              <legend id="financial-mortgage"><span><span>Do you have a mortgage? </span><span class="sub-label"><span>(Optional)</span></span></span></legend>
+                              <span class="undefined nobr"><input id="financial-mortgage.yes" name="financial-mortgage" type="radio" value="yes"><label for="financial-mortgage.yes"><span><span>Yes</span></span></label></span><span class="undefined nobr"><input id="financial-mortgage.no" name="financial-mortgage" type="radio" value="no"><label for="financial-mortgage.no"><span><span>No</span></span></label></span>
+                           </fieldset>
+                        </div>
+                   
+                  </div>
+                  <div class="currency-input small-12 medium-6 columns">
+                   
+                        <label for="financial-monthly-rent">
+                           <span>
+                              Monthly Rent/Mortgage 
+                            <span class="sub-label">
+                                <span>(Optional)</span>
+                            </span>
+                        </span>
+                        </label>
+                        <div class="validation-wrapper"><div class="currency"><span class="currency-sign">$</span><input autocomplete="off"  pattern="[0-9]*" id="financial-monthly-rent" maxlength="7" aria-required="false" class="" type="tel" value="" placeholder="Monthly Rent/Mortgage" title="Monthly Rent/Mortgage"></div></div>
+                    
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="select-input small-12 medium-6 columns required">
+                     
+                           <label for="banking-info"><span>Do you have any bank accounts? <span style="color: red"> *</span></span><span class="show-for-sr"><span>Required</span></span></label>
+                           <div class="validation-wrapper">
+                              <select required id="banking-info" name="banking-info"  class="">
+                                 <option value="" disabled="">Select a type</option>
+                                 <option value="chequing-and-savings">Chequing and Savings</option>
+                                 <option value="chequing-only">Chequing Only</option>
+                                 <option value="savings-only">Savings Only</option>
+                                 <option value="neither">Neither</option>
+                              </select>
+                           </div>
+                     
+                  </div>
+                  <div class="options-input small-12 medium-6 columns">
+                  
+                        <div class="validation-wrapper">
+                           <fieldset class="">
+                              <legend id="financial-cash-advance"><span><span>Would you like to use your card for cash advances? (Optional)</span></span></legend>
+                              <span class="undefined nobr"><input id="financial-cash-advance.yes" name="financial-cash-advance" type="radio" value="yes"><label for="financial-cash-advance.yes"><span><span>Yes</span></span></label></span><span class="undefined nobr"><input id="financial-cash-advance.no" name="financial-cash-advance" type="radio" value="no"><label for="financial-cash-advance.no"><span><span>No</span></span></label></span>
+                           </fieldset>
+                        </div>
+                     
+                  </div>
+               </div>
+            </div>
+         </section>
+         <div class="row align-center">
+            <div class="small-10 medium-8 columns" style="text-align: center">
+               <input id="entry-review-button2" type="submit" class="button" value="Review My Application"/>
+            </div>
+         </div>
+      </form>
+      <a href="https://validator.w3.org/nu/check/referer"><img src="images/w3c-html.png" alt="W3c Html Validator"></a>
+      <a href="https://jigsaw.w3.org/css-validator/check/referer"><img src="images/w3c-css.png" alt="W3c CSS Validator"></a>
+   </body>
+</html>
